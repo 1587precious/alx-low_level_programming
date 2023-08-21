@@ -10,7 +10,7 @@ int b;
 if (n < 0)
 n = -n;
 b = n % 10;
-if (a < 0)
+if (b < 0)
 b = -b;
 _putchar(b + '0');
 return (b);
