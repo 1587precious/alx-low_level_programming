@@ -11,7 +11,7 @@ for (b = 0; b < 10; b++)
 {
 c = b * a;
 if (b == 0)
-{
+{i
 _putchar(c + '0');
 }
 if (c < 10 && b != 0)
@@ -20,10 +20,10 @@ _putchar(',');
 _putchar(' ');
 _putchar(' ');
 _putchar(c + '0');
-} else if (c >= 10)
+} else if (c > = 10)
 {
 _putchar(',');
-_putchar(' ');
+i_putchar(' ');
 _putchar((c / 10) + '0');
 _putchar((c % 10) + '0');
 }
