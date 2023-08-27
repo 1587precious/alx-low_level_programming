@@ -1,24 +1,35 @@
+
+
+#include <stdio.h>
+
 /**
-* main - Prints first 50 Fibonacci numbers, starting with 1 and 2,
-* separated by a comma followed by a space.
-*
-* Return: Always 0.
-*/
+ * main - prints all possible combinations of two two-digit numbers
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-int count;
-unsigned long fib1 = 0, fib2 = 1, sum;
-for (count = 0; count < 50; count++)
+int i, j;
+
+for (i = 0; i < 100; i++)
 {
-sum = fib1 + fib2;
-printf("%lu", sum);
-fib1 = fib2;
-fib2 = sum;
-if (count == 49)
-printf("\n");
-else
-printf(", ");
+for (j = 0; j < 100; j++)
+{
+if (i < j)
+{
+putchar((i / 10) + 48);
+putchar((i % 10) + 48);
+putchar(' ');
+putchar((j / 10) + 48);
+putchar((j % 10) + 48);
+if (i != 98 || j != 99)
+{
+putchar(',');
+putchar(' ');
 }
-return (0);
 }
 
+}
+}
+putchar('\n');
+return (0);
+}
