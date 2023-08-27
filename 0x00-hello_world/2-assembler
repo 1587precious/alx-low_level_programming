@@ -1,0 +1,4 @@
+
+vi 2-assembler 
+#!/bin/bash
+gcc -S $CFILE
