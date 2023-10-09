@@ -1,2 +1,2 @@
 #!/bin/bash
-gccLE
+gcc -c $FILE
