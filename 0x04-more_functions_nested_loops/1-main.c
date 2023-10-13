@@ -1,4 +1,3 @@
-julien@ubuntu:~/0x04$ cat 1-main.c 
 #include "main.h"
 #include <stdio.h>
 
@@ -17,3 +16,4 @@ int main(void)
     printf("%c: %d\n", c, _isdigit(c));
     return (0);
 }
+
