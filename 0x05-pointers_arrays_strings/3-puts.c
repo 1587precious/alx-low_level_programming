@@ -1,19 +1,13 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - Prints the alphabet.
- *
- * Return: Always 0 (Success)
- */
-int main(void)
+* _puts - prints a string, followed by a new line, to stdout
+* @str: string to print
+*/
+void _puts(char *str)
 {
-char alp[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-int i;
-
-for (i = 0; i < 52; i++)
+while (*str != '\0')
 {
-putchar(alp[i]);
+_putchar(*str++);
 }
-putchar('\n');
-return (0);
-}}
+_putchar('\n');
+}
