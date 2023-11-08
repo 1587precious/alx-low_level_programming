@@ -1,19 +1,21 @@
-#include <stdio.h>
 #include "dog.h"
-
+#include <stdlib.h>
+#include <stdio.h>
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_dog - print a structure.
+ * @d: pointer containing the structure.
  */
-int main(void)
+void print_dog(struct dog *d)
 {
-    dog_t my_dog;
+	if (d == NULL)
+		return;
+	if ((*d).name == NULL)
+		(*d).name = "(nil)";
 
-    my_dog.name = "Django";
-    my_dog.age = 3.5;
-    my_dog.owner = "Bob";
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
-    printf("The name of the owner is %s\n", my_dog.owner);
-    return (0);
+	if ((*d).owner == NULL)
+		(*d).owner = "(nil)";
+	printf("Name: %s\n", (*d).name);
+	printf("Age: %f\n", (*d).age);
+	printf("Owner: %s\n", (*d).owner);
 }
+
