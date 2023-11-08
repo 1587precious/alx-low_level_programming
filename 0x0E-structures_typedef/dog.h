@@ -1,21 +1,24 @@
-#include "dog.h"
+#ifndef DOG_H
+#define DOG_H
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * print_dog - print a structure.
- * @d: pointer containing the structure.
+ * struct dog - this descripction about which dog
+ * @name: sdfasdf
+ * @age:  asdfas
+ * @owner:  asdf
  */
-void print_dog(struct dog *d)
-{
-	if (d == NULL)
-		return;
-	if ((*d).name == NULL)
-		(*d).name = "(nil)";
 
-	if ((*d).owner == NULL)
-		(*d).owner = "(nil)";
-	printf("Name: %s\n", (*d).name);
-	printf("Age: %f\n", (*d).age);
-	printf("Owner: %s\n", (*d).owner);
-}
+struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+};
+typedef struct dog dog_t;
+dog_t *new_dog(char *name, float age, char *owner);
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+void free_dog(dog_t *d);
+#endif
 
