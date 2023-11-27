@@ -1,30 +1,20 @@
-
-#include "main.h"
+#include "holberton.h"
 /**
-* _strncat - concatenate two strings
-* using at most n bytes from src
-* @dest: input value
-* @src: input value
-* @n: input value
-*
-* Return: dest
-*/
-char *_strncat(char *dest, char *src, int n)
+ * _strcmp - Write a function that compares two strings.
+ *
+ * @s1: This is the input string
+ * @s2: This is the input string
+ *
+ * Return: If the strings are equals return "0", if not return other number
+ */
+
+int _strcmp(char *s1, char *s2)
 {
-int c;
-int b;
-c = 0;
-while (dest[i] != '\0')
-{
-i++;
-}
-j = 0;
-while (b < n && src[j] != '\0')
-{
-dest[c] = src[b];
-i++;
-j++;
-}
-dest[c] = '\0';
-return (dest);
+	for (; (*s1 != '\0' && *s2 != '\0') && (*s1 == *s2); s1++, s2++)
+		;
+	if (*s1 == *s2)
+	{
+		return (0);
+	}
+	return (*s1 - *s2);
 }
