@@ -1,31 +1,15 @@
-#!/bin/bash
-
-# Compile dynamic library
-gcc -Wall -pedantic -Werror -Wextra -fPIC -shared -o libdynamic.so *.c
-
-# Check if compilation was successful
-if [ $? -eq 0 ]; then
-    echo "Dynamic library compilation successful"
-
-    # Compile main program
-    gcc -Wall -pedantic -Werror -Wextra -L. 0-main.c -ldynamic -o len
-
-    # Check if compilation was successful
-    if [ $? -eq 0 ]; then
-        echo "Main program compilation successful"
-
-        # Set LD_LIBRARY_PATH temporarily for testing
-        export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
-
-        # Run the program
-        ./len
-
-        # Clean up
-        unset LD_LIBRARY_PATH
-    else
-        echo "Main program compilation failed"
-    fi
+#include "main.h"
+/**
+* _islower - check if char is lowercase
+* @c: is the char to be checked
+* Return: 1 if char is lowercase, otherwise 0.
+*/
+int _islower(int c)
+{
+if (c >= 'a' && c <= 'z')
+return (1);
 else
-    echo "Dynamic library compilation failed"
-fi
+return (0);
+}
+
 
