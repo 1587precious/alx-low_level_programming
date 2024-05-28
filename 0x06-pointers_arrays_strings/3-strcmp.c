@@ -1,23 +1,22 @@
-#include "main.h"
-
+#include <stdio.h>
+#include "holberton.h"
 /**
- * _strcmp - compares two strings
- * @s1: first string to compare
- * @s2: second string to compare
- *
- * Return: less than 0 if s1 is less than s2, 0 if they're equal,
- * more than 0 if s1 is greater than s2
- */
+ *_strcmp -main entry.
+ *void: nothing
+ *@s1: char pointer
+ *@s2: char pointer
+ *Description: function that compares two strings.
+ * Return: Integer with the diference
+ **/
 int _strcmp(char *s1, char *s2)
 {
-	while (*s1 == *s2)
-	{
-		if (*s1 == '\0')
-		{
-			return (0);
-		}
-		s1++;
-		s2++;
-	}
-	return (*s1 - *s2);
+  int c = 0, r = 0;
+
+  while (s1[c] == s2[c] && s1[c] != '\0' && s2[c] != '\0')
+    c++;
+
+  if (s1[c] != s2[c])
+    r  = s1[c] - s2[c];
+
+  return (r);
 }
